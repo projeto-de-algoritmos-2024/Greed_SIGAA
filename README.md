@@ -36,7 +36,7 @@ O algoritmo de Scheduling to Minimizing Lateness ajuda o usuário a organizar a 
 
 ## Pré-requisitos:
 - Python 3.12.7 ou superior
-- Biblioteca Pillow e Tkinter
+- Bibliotecas: Pillow, reportlab e Tkinter
 
 ## Como rodar o projeto:
 
@@ -79,7 +79,6 @@ O algoritmo irá ordenar os tarefas de forma a maximizar a quantidade de tarefas
 A agenda será exibida, mostrando quais tarefas você pode realizar e em que horários, sem sobreposição.
 Exemplo de uso:
 
-Você tem as seguintes tarefas:
 ```
 TAREFA 1, 8:00, 13:00
 TAREFA 2, 9:00, 12:00
@@ -90,22 +89,21 @@ TAREFA 6, 13:00, 17:00
 TAREFA 7, 14:00, 18:00
 TAREFA 8, 16:00, 19:00
 ```
-Após calcular, o algoritmo irá te mostrar a sequência de trabalhos que você pode fazer para aproveitar ao máximo o tempo disponível, sem sobreposição de horários.
+Após calcular, o algoritmo irá te mostrar a sequência de trabalhos que você pode fazer para aproveitar ao máximo o tempo disponível, sem sobreposição de horários. Você pode baixar um pdf com os resultados do agendamento clicando no botão "Baixar pdf".
 
-2. ### Interval Partitioning - Divisão de salas para aulas
-O algoritmo Interval Partitioning organiza as aulas em diferentes salas de acordo com os horários de cada uma. Se uma aula entrar em conflito com a última, uma nova sala será aberta.
+2. ### Interval Partitioning - Divisão de salas
+O algoritmo Interval Partitioning organiza eventos (aulas, palestras...) em diferentes salas de acordo com os horários de cada evento. Se um evento entrar em conflito com outro, uma nova sala será aberta.
 
 Como usar:
-Insira o horário de início e término de cada aula. O formato deve ser:
+Insira o horário de início e término de cada evento. O formato deve ser:
 Exemplo:
 ```
 Aula 1,09:00, 11:00
 ```
-Após inserir todos os horários das aulas, clique no botão "Calcular".
-O algoritmo irá alocar as aulas em salas, criando novas salas sempre que for necessário para evitar conflitos de horários.
+Após inserir todos os horários, clique no botão "Calcular".
+O algoritmo irá alocar os eventos em salas, criando novas salas sempre que for necessário para evitar conflitos de horários.
 Exemplo de uso:
 
-Você tem os seguintes horários de aula:
  ```
 Cálculo 1, 09:00, 10:30
 Cálculo 2, 09:00, 10:30
@@ -118,7 +116,8 @@ Arquitetura e Desenho de Software, 14:00, 16:30
 Qualidade de Software 1, 15:00, 16:30
 Testes de Software 1, 15:00, 16:30
  ```
-O algoritmo verificará que as aulas 1 e 2 têm conflito e alocará a Aula 2 em uma nova sala. A Aula 3 pode ser alocada na mesma sala da Aula 1, pois não há sobreposição.
+
+Você pode baixar um pdf com os resultados do agendamento clicando no botão "Baixar pdf".
 
 3. ### Scheduling to Minimizing Lateness - Minimizar o atraso total
 O algoritmo Scheduling to Minimizing Lateness ajuda a organizar as tarefas sem intervalos entre elas de forma a minimizar o atraso total. Ele organiza a sequência das tarefas de modo que o atraso total no cumprimento dos prazos seja o menor possível.
@@ -137,7 +136,6 @@ O algoritmo irá calcular a melhor ordem de execução das tarefas de forma a mi
 A agenda será exibida com os horários de início e término das tarefas, além de indicar, caso haja, os atrasos em horas e minutos.
 Exemplo de uso:
 
-Você tem as seguintes tarefas:
 ```
 8:00
 TRABALHO 1, 1, 17:00
@@ -147,7 +145,7 @@ TRABALHO 4, 3, 14:00
 TRABALHO 5, 3, 22:00
 TRABALHO 6, 4, 17:00
 ```
-O algoritmo irá calcular a ordem de execução das tarefas para minimizar os atrasos e exibirá a sequência com o tempo de atraso (se houver).
+O algoritmo irá calcular a ordem de execução das tarefas para minimizar os atrasos e exibirá a sequência com o tempo de atraso (se houver). Você pode baixar um pdf com os resultados do agendamento clicando no botão "Baixar pdf".
 
 
 

@@ -34,7 +34,7 @@ Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Como rodar o projeto:
 
-1. Certifique-se de ter o **Python 3.12.7** instalado em seu sistema. Você pode verificar a versão do Python com o seguinte comando no terminal:
+1. Certifique-se de ter o **Python 3.12.7 ou versão superior** instalado em seu sistema. Você pode verificar a versão do Python com o seguinte comando no terminal:
 
    ```bash
    python --version
@@ -70,10 +70,14 @@ Exemplo de uso:
 
 Você tem as seguintes tarefas:
 ```
-Tarefa A, 14:00, 16:00
-Tarefa B, 15:00, 17:00
-Tarefa C, 16:30, 18:00
-Tarefa D, 18:00, 20:00
+TAREFA 1, 8:00, 13:00
+TAREFA 2, 9:00, 12:00
+TAREFA 3, 11:00, 13:00
+TAREFA 4, 11:00, 16:00
+TAREFA 5, 12:00, 15:00
+TAREFA 6, 13:00, 17:00
+TAREFA 7, 14:00, 18:00
+TAREFA 8, 16:00, 19:00
 ```
 Após calcular, o algoritmo irá te mostrar a sequência de trabalhos que você pode fazer para aproveitar ao máximo o tempo disponível, sem sobreposição de horários.
 
@@ -92,9 +96,16 @@ Exemplo de uso:
 
 Você tem os seguintes horários de aula:
  ```
-Aula 1, 09:00, 11:00
-Aula 2, 10:00, 11:00
-Aula 3, 11:00, 12:00
+Calculo 1, 9:00, 10:30
+Calculo 2, 9:00, 10:30
+IAL, 9:00, 12:30
+Sistema de Banco de dados 1,11:00,12:30
+Sistema de Banco de dados 2,11:00,14:00
+Projeto de Algoritmos, 13:00,14:30
+Redes,13:00,14:30
+ARQUITETURA E DESENHO DE SOFTWARE,14:00,16:30
+QUALIDADE DE SOFTWARE 1,15:00, 16:30
+TESTES DE SOFTWARE 1, 15:00, 16:30
  ```
 O algoritmo verificará que as aulas 1 e 2 têm conflito e alocará a Aula 2 em uma nova sala. A Aula 3 pode ser alocada na mesma sala da Aula 1, pois não há sobreposição.
 
@@ -118,9 +129,12 @@ Exemplo de uso:
 Você tem as seguintes tarefas:
 ```
 8:00
-Tarefa 1, 3, 15:00
-Tarefa 2, 2, 16:00
-Tarefa 3, 1, 17:00
+TRABALHO 1, 1, 17:00
+TRABALHO 2, 2, 16:00
+TRABALHO 3, 2, 23:00
+TRABALHO 4, 3, 14:00
+TRABALHO 5, 3, 22:00
+TRABALHO 6, 4, 17:00
 ```
 O algoritmo irá calcular a ordem de execução das tarefas para minimizar os atrasos e exibirá a sequência com o tempo de atraso (se houver).
 

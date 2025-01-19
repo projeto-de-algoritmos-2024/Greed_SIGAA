@@ -9,8 +9,8 @@ diretorio_atual = os.path.dirname(os.path.abspath(__file__))
 def abrir_interval_scheduling():
     subprocess.run(['python3', diretorio_atual +'/agendamento_intervalo.py'])
 
-def abrir_partition_scheduling():
-    subprocess.run(['python3', diretorio_atual +'/agendamento_particao.py'])
+def abrir_interval_partitioning():
+    subprocess.run(['python3', diretorio_atual +'/particionamento_intervalo.py'])
 
 def abrir_min_lateness_scheduling():
     subprocess.run(['python3', diretorio_atual +'/minimizar_atraso.py'])
@@ -37,7 +37,7 @@ def main():
     agenda_intervalos = Button(root, text="Agendamento de Intervalos", command=abrir_interval_scheduling)
     agenda_intervalos.place(x=50, y=280)
 
-    agenda_particoes = Button(root, text="Particionamento de Intervalos", command=abrir_partition_scheduling)
+    agenda_particoes = Button(root, text="Particionamento de Intervalos", command=abrir_interval_partitioning)
     agenda_particoes.place(x=50, y=320)
 
     minimiza_atrasos = Button(root, text="Minimizar Atraso", command=abrir_min_lateness_scheduling)

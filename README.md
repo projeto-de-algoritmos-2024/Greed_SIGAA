@@ -25,9 +25,32 @@ O algoritmo de Scheduling to Minimizing Lateness ajuda o usuário a organizar a 
 Adicione 3 ou mais screenshots do projeto em funcionamento.
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+**Linguagem**: Python 3.12.7  
+**Framework**: (não se aplica, pois não há framework específico)
+
+## Pré-requisitos:
+- Python 3.12.7 ou superior
+- Biblioteca Pillow e Tkinter
+
+## Como rodar o projeto:
+
+1. Certifique-se de ter o **Python 3.12.7** instalado em seu sistema. Você pode verificar a versão do Python com o seguinte comando no terminal:
+
+   ```bash
+   python --version
+   ```
+
+   Caso você não tenha o Python 3.12.7 instalado, faça o download no [site oficial do Python](https://www.python.org/downloads/release/python-3127/).
+
+2. Instale a biblioteca **Pillow** utilizando o **pip**. No terminal, execute o seguinte comando:
+
+   ```bash
+   pip install pillow
+   ```
+3. O Tkinter já vem pré-instalado com a maioria das distribuições do Python. No entanto, caso você esteja utilizando uma distribuição que não inclua o Tkinter, você pode instalá-lo utilizando o seguinte comando:
+   ```bash
+   sudo apt-get install python3-tk
+   ```
 
 ## Uso 
 1. ### Interval Scheduling - Maximizar o número de trabalhos realizados
@@ -83,8 +106,7 @@ Tarefa 1, 3, 15:00
 Tarefa 2, 2, 16:00
 Tarefa 3, 1, 17:00
 O algoritmo irá calcular a ordem de execução das tarefas para minimizar os atrasos e exibirá a sequência com o tempo de atraso (se houver).
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+
 
 
 

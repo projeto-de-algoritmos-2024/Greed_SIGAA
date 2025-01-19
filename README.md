@@ -13,7 +13,7 @@
 Este projeto é uma aplicação em Python que apresenta uma interface gráfica interativa com três algoritmos do módulo GREED. Através dessa aplicação, o usuário pode escolher entre três opções para resolver problemas práticos de otimização de tempo e recursos. Os algoritmos são:
 
 1. ### Interval Scheduling
-O algoritmo de Interval Scheduling ajuda o usuário a organizar seu dia de forma a realizar o maior número de trabalhos possíveis dentro de um intervalo de tempo específico. O usuário insere os horários e durações dos trabalhos, e o algoritmo determina a melhor ordem para realizar as tarefas, maximizando a quantidade de trabalhos que podem ser feitos.
+O algoritmo de Interval Scheduling ajuda o usuário a organizar seu dia de forma a realizar o maior número de trabalhos possíveis dentro de um intervalo de tempo específico. O usuário insere os horários de início e fim, e o algoritmo determina a melhor ordem para realizar as tarefas, maximizando a quantidade de trabalhos que podem ser feitos.
 
 2. ### Interval Partitioning
 O algoritmo de Interval Partitioning é útil para a organização de aulas em salas. O usuário insere o horário das aulas, e o algoritmo aloca as aulas em diferentes salas de modo a evitar sobrecarga, ou seja, se duas aulas se sobrepuserem, uma nova sala será aberta para acomodar a aula que não cabe na sala já alocada.
@@ -48,7 +48,7 @@ Tarefa C, 16:30, 18:00
 Tarefa D, 18:00, 20:00
 Após calcular, o algoritmo irá te mostrar a sequência de trabalhos que você pode fazer para aproveitar ao máximo o tempo disponível, sem sobreposição de horários.
 
-2. Interval Partitioning - Divisão de salas para aulas
+2. ### Interval Partitioning - Divisão de salas para aulas
 O algoritmo Interval Partitioning organiza as aulas em diferentes salas de acordo com os horários de cada uma. Se uma aula entrar em conflito com a última, uma nova sala será aberta.
 
 Como usar:
@@ -64,7 +64,7 @@ Aula 2,10:00, 11:00
 Aula 3,11:00, 12:00
 O algoritmo verificará que as aulas 1 e 2 têm conflito e alocará a Aula 2 em uma nova sala. A Aula 3 pode ser alocada na mesma sala da Aula 1, pois não há sobreposição.
 
-3. Scheduling to Minimizing Lateness - Minimizar o atraso total
+3. ### Scheduling to Minimizing Lateness - Minimizar o atraso total
 O algoritmo Scheduling to Minimizing Lateness ajuda a organizar as tarefas sem intervalos entre elas de forma a minimizar o atraso total. Ele organiza a sequência das tarefas de modo que o atraso total no cumprimento dos prazos seja o menor possível.
 
 Como usar:

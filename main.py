@@ -25,17 +25,23 @@ def main():
     imagem_tk = ImageTk.PhotoImage(imagem)
     label = Label(root, image=imagem_tk).place(x=0, y=-235, relwidth=1, relheight=1)
 
+    text_bemvindo = Label(root, text="Olá, bem-vindo ao SIGAA! 👋", font=('normal', 12), justify="left")
+    text_bemvindo.place(x=50, y=100)
+
+    text_explicacao = Label(root, text="Este aplicativo oferece três opções para organizar suas atividades:\n ✅ Agendamento de Intervalos: Seleciona tarefas que podem ser realizadas sem sobreposição de horário.\n ✅ Particionamento de Intervalos: Aloca atividades em salas sem conflitos de horário.\n ✅ Minimização de Atraso: Organiza tarefas com prazos de forma a minimizar os atrasos.", font=('normal', 11), justify="left")
+    text_explicacao.place(x=50, y=150)
+
     text_escolha = Label(root, text="Escolha uma opção de agendamento:", font=('normal', 12), justify="left")
-    text_escolha.place(x=100, y=130)
+    text_escolha.place(x=50, y=250)
 
     agenda_intervalos = Button(root, text="Agendamento de Intervalos", command=abrir_interval_scheduling)
-    agenda_intervalos.place(x=100, y=160)
+    agenda_intervalos.place(x=50, y=280)
 
     agenda_particoes = Button(root, text="Particionamento de Intervalos", command=abrir_partition_scheduling)
-    agenda_particoes.place(x=100, y=200)
+    agenda_particoes.place(x=50, y=320)
 
     minimiza_atrasos = Button(root, text="Minimizar Atraso", command=abrir_min_lateness_scheduling)
-    minimiza_atrasos.place(x=100, y=240)
+    minimiza_atrasos.place(x=50, y=360)
 
     root.mainloop()
 

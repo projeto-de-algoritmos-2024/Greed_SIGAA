@@ -58,17 +58,23 @@ O algoritmo Interval Scheduling ajuda a organizar seu dia para realizar o maior 
 
 Como usar:
 Insira o nome de cada tarefa, o horário de início e o horário final de cada uma delas. O formato deve ser:
-Exemplo: Tarefa 1, 14:00, 18:00 (isso significa que o Trabalho 1 começa às 14:00 e termina às 18:00).
+Exemplo: 
+```
+Tarefa 1, 14:00, 18:00
+(isso significa que o Trabalho 1 começa às 14:00 e termina às 18:00).
+```
 Após inserir todos os trabalhos, clique no botão "Calcular".
 O algoritmo irá ordenar os tarefas de forma a maximizar a quantidade de tarefas realizadas, respeitando os horários de início e término inseridos.
 A agenda será exibida, mostrando quais tarefas você pode realizar e em que horários, sem sobreposição.
 Exemplo de uso:
 
-Você tem os seguintes trabalhos:
+Você tem as seguintes tarefas:
+```
 Tarefa A, 14:00, 16:00
 Tarefa B, 15:00, 17:00
 Tarefa C, 16:30, 18:00
 Tarefa D, 18:00, 20:00
+```
 Após calcular, o algoritmo irá te mostrar a sequência de trabalhos que você pode fazer para aproveitar ao máximo o tempo disponível, sem sobreposição de horários.
 
 2. ### Interval Partitioning - Divisão de salas para aulas
@@ -76,15 +82,20 @@ O algoritmo Interval Partitioning organiza as aulas em diferentes salas de acord
 
 Como usar:
 Insira o horário de início e término de cada aula. O formato deve ser:
-Exemplo: Aula 1,09:00, 11:00
+Exemplo:
+```
+Aula 1,09:00, 11:00
+```
 Após inserir todos os horários das aulas, clique no botão "Calcular".
 O algoritmo irá alocar as aulas em salas, criando novas salas sempre que for necessário para evitar conflitos de horários.
 Exemplo de uso:
 
 Você tem os seguintes horários de aula:
+ ```
 Aula 1, 09:00, 11:00
-Aula 2,10:00, 11:00
-Aula 3,11:00, 12:00
+Aula 2, 10:00, 11:00
+Aula 3, 11:00, 12:00
+ ```
 O algoritmo verificará que as aulas 1 e 2 têm conflito e alocará a Aula 2 em uma nova sala. A Aula 3 pode ser alocada na mesma sala da Aula 1, pois não há sobreposição.
 
 3. ### Scheduling to Minimizing Lateness - Minimizar o atraso total
@@ -93,18 +104,24 @@ O algoritmo Scheduling to Minimizing Lateness ajuda a organizar as tarefas sem i
 Como usar:
 Primeiramente insira o horário de que deseja começar a realização das tarefas. Após isso, insira o nome de cada tarefa, a duração e a deadline (prazo) de cada uma delas. O formato deve ser:
 Exemplo: 
+```
 8:00 
 Tarefa 1, 2, 12:00
+(isso significa que o horario de inicio das realizações de tarefa é as 8:00, a tarefa 1 dem duração de 2 horas
+e sua deadline é as 12:00hrs).
+```
 Após inserir todas as tarefas, clique no botão "Calcular".
 O algoritmo irá calcular a melhor ordem de execução das tarefas de forma a minimizar o atraso. Ele leva em consideração o horário de início, a duração de cada tarefa e os prazos estabelecidos para determinar a sequência ideal.
 A agenda será exibida com os horários de início e término das tarefas, além de indicar, caso haja, os atrasos em horas e minutos.
 Exemplo de uso:
 
 Você tem as seguintes tarefas:
+```
 8:00
 Tarefa 1, 3, 15:00
 Tarefa 2, 2, 16:00
 Tarefa 3, 1, 17:00
+```
 O algoritmo irá calcular a ordem de execução das tarefas para minimizar os atrasos e exibirá a sequência com o tempo de atraso (se houver).
 
 

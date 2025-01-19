@@ -8,7 +8,7 @@ class PDF:
     def __init__(self, resultado, diretorio):
         self.resultado = resultado
         self.diretorio = diretorio
-        self.data_atual = datetime.now().strftime("%Y-%m-%d_%H-%M")
+        self.data_atual = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
 
     def criar_pdf(self):
         if not os.path.exists(self.diretorio + "/pdfs"):

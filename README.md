@@ -96,16 +96,16 @@ Exemplo de uso:
 
 Você tem os seguintes horários de aula:
  ```
-Calculo 1, 9:00, 10:30
-Calculo 2, 9:00, 10:30
-IAL, 9:00, 12:30
-Sistema de Banco de dados 1,11:00,12:30
-Sistema de Banco de dados 2,11:00,14:00
-Projeto de Algoritmos, 13:00,14:30
-Redes,13:00,14:30
-ARQUITETURA E DESENHO DE SOFTWARE,14:00,16:30
-QUALIDADE DE SOFTWARE 1,15:00, 16:30
-TESTES DE SOFTWARE 1, 15:00, 16:30
+Cálculo 1, 09:00, 10:30
+Cálculo 2, 09:00, 10:30
+IAL, 09:00, 12:30
+Sistema de Banco de Dados 1, 11:00, 12:30
+Sistema de Banco de Dados 2, 11:00, 14:00
+Projeto de Algoritmos, 13:00, 14:30
+Redes, 13:00, 14:30
+Arquitetura e Desenho de Software, 14:00, 16:30
+Qualidade de Software 1, 15:00, 16:30
+Testes de Software 1, 15:00, 16:30
  ```
 O algoritmo verificará que as aulas 1 e 2 têm conflito e alocará a Aula 2 em uma nova sala. A Aula 3 pode ser alocada na mesma sala da Aula 1, pois não há sobreposição.
 

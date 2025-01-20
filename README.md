@@ -64,6 +64,13 @@ O algoritmo de Scheduling to Minimizing Lateness ajuda o usuário a organizar a 
    pip install reportlab
    ```
 
+5. Rodando o projeto:
+
+   ```bash
+   python3 main.py
+   ```
+
+
 ## Uso 
 1. ### Interval Scheduling - Maximizar o número de trabalhos realizados
 O algoritmo Interval Scheduling ajuda a organizar seu dia para realizar o maior número de tarefas possíveis dentro de um período de tempo específico.

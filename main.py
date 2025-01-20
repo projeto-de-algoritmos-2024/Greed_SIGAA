@@ -28,7 +28,7 @@ def main():
     text_bemvindo = Label(root, text="Olá, bem-vindo ao SIGAA! 👋", font=('normal', 12), justify="left")
     text_bemvindo.place(x=50, y=100)
 
-    text_explicacao = Label(root, text="Este aplicativo oferece três opções para organizar suas atividades:\n ✅ Agendamento de Intervalos: Seleciona tarefas que podem ser realizadas sem sobreposição de horário.\n ✅ Particionamento de Intervalos: Aloca atividades em salas sem conflitos de horário.\n ✅ Minimização de Atraso: Organiza tarefas com prazos de forma a minimizar os atrasos.", font=('normal', 11), justify="left")
+    text_explicacao = Label(root, text="Este programa oferece três opções para organizar suas atividades:\n ✅ Agendamento de Intervalos: Seleciona tarefas que podem ser realizadas sem sobreposição de horário.\n ✅ Particionamento de Intervalos: Aloca atividades em salas sem conflitos de horário.\n ✅ Minimização de Atraso: Organiza tarefas com prazos de forma a minimizar os atrasos.", font=('normal', 11), justify="left")
     text_explicacao.place(x=50, y=150)
 
     text_escolha = Label(root, text="Escolha uma opção de agendamento:", font=('normal', 12), justify="left")

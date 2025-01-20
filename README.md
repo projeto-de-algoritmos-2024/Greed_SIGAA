@@ -11,6 +11,7 @@
 
 ## Sobre 
 ![home](imgs/SIGAA.png)
+
 Este projeto é uma aplicação em Python que apresenta uma interface gráfica interativa com três algoritmos do módulo GREED. Através dessa aplicação, o usuário pode escolher entre três opções para resolver problemas práticos de otimização de tempo e recursos. Os algoritmos são:
 
 1. ### Interval Scheduling
@@ -30,6 +31,9 @@ O algoritmo de Scheduling to Minimizing Lateness ajuda o usuário a organizar a 
 ![particionamento-intervalos](imgs/particionamento-intervalos.png)
 ![gerando-pdf](imgs/gerando-pdf.png)
 ![pdf-gerado](imgs/pdf-gerado.png)
+
+## Vídeo
+[apresentação](https://youtu.be/FKt3Z0G2z2E)
 
 ## Instalação 
 **Linguagem**: Python 3.12.7  

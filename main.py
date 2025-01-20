@@ -6,14 +6,25 @@ from PIL import Image, ImageTk
 
 diretorio_atual = os.path.dirname(os.path.abspath(__file__))
 
+import subprocess
+
 def abrir_interval_scheduling():
-    subprocess.run(['python3', diretorio_atual +'/agendamento_intervalo.py'])
+    try:
+        subprocess.run(['python3', diretorio_atual + '/agendamento_intervalo.py'], check=True)
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        subprocess.run(['python', diretorio_atual + '/agendamento_intervalo.py'])
 
 def abrir_interval_partitioning():
-    subprocess.run(['python3', diretorio_atual +'/particionamento_intervalo.py'])
+    try:
+        subprocess.run(['python3', diretorio_atual + '/particionamento_intervalo.py'], check=True)
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        subprocess.run(['python', diretorio_atual + '/particionamento_intervalo.py'])
 
 def abrir_min_lateness_scheduling():
-    subprocess.run(['python3', diretorio_atual +'/minimizar_atraso.py'])
+    try:
+        subprocess.run(['python3', diretorio_atual + '/minimizar_atraso.py'], check=True)
+    except (subprocess.CalledProcessError, FileNotFoundError):
+        subprocess.run(['python', diretorio_atual + '/minimizar_atraso.py'])
 
 def main():
     root = tk.Tk()

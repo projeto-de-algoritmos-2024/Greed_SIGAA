@@ -1,10 +1,8 @@
 import tkinter as tk
-from tkinter import Tk, Label, Entry, Button, Frame, Toplevel, messagebox
-import os, subprocess
-from PIL import Image, ImageTk
-from reportlab.lib.pagesizes import letter
-from reportlab.pdfgen import canvas
+from tkinter import Label, Text, Button, Toplevel, messagebox
+import os
 from library.gerar_pdf import PDF
+from PIL import Image, ImageTk
 
 diretorio_atual = os.path.dirname(os.path.abspath(__file__))
 
@@ -30,43 +28,54 @@ def calcular_interval_scheduling():
             ultima_hora_fim = tarefa[2]
 
     resultado = "\n".join([f"{t[0]} ({t[1]//60:02}:{t[1]%60:02} - {t[2]//60:02}:{t[2]%60:02})" for t in tarefas_selecionadas])
-    label_resultado.config(text=f"Tarefas Selecionadas:\n{resultado}")
 
-    gerar_pdf = PDF(resultado, diretorio_atual)
-    Button(janela, text="Baixar pdf", command=lambda: gerar_pdf.criar_pdf()).place(x=450, y=300)
+    mostrar_resultado(resultado)
+
+def mostrar_resultado(resultado):
+    nova_janela = Toplevel(janela)
+    nova_janela.title("Resultados")
+    nova_janela.geometry("500x400")
+
+    frame_resultado = tk.Frame(nova_janela)
+    frame_resultado.pack(fill=tk.BOTH, expand=True)
+
+    canvas = tk.Canvas(frame_resultado)
+    canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
+
+    scrollbar = tk.Scrollbar(frame_resultado, orient="vertical", command=canvas.yview)
+    scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
+
+    canvas.config(yscrollcommand=scrollbar.set)
+
+    label_resultado = tk.Label(canvas, text=f"Tarefas Selecionadas:\n{resultado}", justify="left", anchor="nw")
+    label_id = canvas.create_window(0, 0, window=label_resultado, anchor="nw")
+
+    def atualizar_scrollregion(event):
+        canvas.configure(scrollregion=canvas.bbox("all"))
+
+    label_resultado.bind("<Configure>", atualizar_scrollregion)
+
+    Button(nova_janela, text="Baixar PDF", command=lambda: gerar_pdf(resultado)).pack(pady=10)
+
+def gerar_pdf(resultado):
+    pdf = PDF(resultado, diretorio_atual)
+    pdf.criar_pdf()
 
 janela = tk.Tk()
 janela.title("Agendamento de Intervalos")
 
-largura_tela = janela.winfo_screenwidth()
-altura_tela = janela.winfo_screenheight()
-janela.geometry(f"{largura_tela}x{altura_tela}+0+0")
+janela.geometry('960x540')
+janela.resizable(False, False)
 
-Label(janela, text="Insira uma tarefa por linha, separando o nome da tarefa, a hora de início e a hora de término por vírgulas.\nExemplo:\nTarefa 1, 08:00, 11:00\nTarefa 2, 11:00, 12:00\n", font=('Arial', 11), justify="left").place(x=50, y=15)
+imagem = Image.open(diretorio_atual + "/imgs/agendamento-de-intervalos.png")
+imagem_tk = ImageTk.PhotoImage(imagem)
+label = Label(janela, image=imagem_tk).place(x=0, y=-235, relwidth=1, relheight=1)
 
-entrada_atividades = tk.Text(janela, height=10, width=80)
-entrada_atividades.place(x=15, y=100)
+Label(janela, text="Insira uma tarefa por linha, separando o nome da tarefa, a hora de início e a hora de término por vírgulas.\nExemplo:\nTarefa 1, 08:00, 11:00\nTarefa 2, 11:00, 12:00\n", font=('Arial', 11), justify="left").place(x=50, y=100)
 
-Button(janela, text="Calcular", command=calcular_interval_scheduling).place(x=300, y=300)
+entrada_atividades = Text(janela, height=15, width=80)
+entrada_atividades.place(x=50, y=200)
 
-###
-frame_resultado = tk.Frame(janela)
-frame_resultado.place(x=10, y=350)
-
-canvas = tk.Canvas(frame_resultado)
-canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-
-scrollbar = tk.Scrollbar(frame_resultado, orient="vertical", command=canvas.yview)
-scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-
-canvas.config(yscrollcommand=scrollbar.set)
-
-label_resultado = tk.Label(canvas, text="", justify="left")
-label_id = canvas.create_window(0, 0, window=label_resultado, anchor="nw")
-
-def atualizar_scrollregion(event):
-    canvas.configure(scrollregion=canvas.bbox("all"))
-
-label_resultado.bind("<Configure>", atualizar_scrollregion)
+Button(janela, text="Calcular", command=calcular_interval_scheduling).place(x=50, y=470)
 
 janela.mainloop()

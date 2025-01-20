@@ -21,7 +21,7 @@ def main():
     root.geometry('960x540')
     root.resizable(False, False)
 
-    imagem = Image.open(diretorio_atual + "/img/SIGAA.png")
+    imagem = Image.open(diretorio_atual + "/imgs/SIGAA.png")
     imagem_tk = ImageTk.PhotoImage(imagem)
     label = Label(root, image=imagem_tk).place(x=0, y=-235, relwidth=1, relheight=1)
 

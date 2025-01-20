@@ -19,8 +19,11 @@ class PDF:
         c = canvas.Canvas(caminho_pdf, pagesize=letter)
         c.setFont("Helvetica", 12)
         
-        c.drawString(100, 750, "Resultado do agendamento:")
-        y = 730
+        imagem = self.diretorio + "/imgs/SIGAA.png"
+
+        c.drawImage(imagem, 0, 750, width=614.4, height=44.8)
+        c.drawString(100, 700, "Resultado do agendamento:")
+        y = 670
         for linha in self.resultado.split("\n"):
             c.drawString(100, y, linha)
             y -= 20
